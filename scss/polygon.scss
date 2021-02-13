@@ -1,0 +1,214 @@
+* { box-sizing: border-box; }
+a {text-decoration: none;}
+:root { font-size: 14px; }
+
+$primary: #2cda00;
+$secondary: #b0be34;
+$secondary-light: #f1e970;
+$gray: #F8F8F6;
+
+/* CHIPPED (0 0, calc(100% - 3rem) 0, 100% 3rem, 100% 100%, 0 100%); } */
+/* HEIGHT FIRST ROW 25REM */
+/* HEIGHT SECOND+ ROW 22REM */
+/* COLOR A: #da0050 */
+/* COLOR B: #612a46 */
+/* BGC:     #F8F8F6 */
+
+/* Nav */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $primary;
+    background: -webkit-linear-gradient(right, $primary, $secondary);
+    margin-bottom: 3rem;
+
+    // Logo
+    .logo-wrapper {
+        padding: 1rem;
+        img {
+            height: 40px;
+            width: auto;
+        }
+    }
+
+    // Navegacion
+    nav,
+    .actions {
+        height: 71px;
+        display: flex;
+        align-items: center
+    }
+    nav > *,
+    .actions a {
+        position: relative;
+        display: grid;
+        place-items: center;
+        &:hover {
+            background-color: $secondary-light;
+        }
+    }
+    a,
+    nav > * {
+        color: #fff;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        height: 100%;
+        font-size: 1rem;
+        padding: 0 1rem;
+        cursor: pointer;
+    }
+    // RRSS
+    .rrss {
+        display: flex;
+        align-items: center;
+    }
+
+    // Subscribe
+    .subscribe button {
+        color: #fff;
+        background: transparent;
+        border: 1px solid #fff;
+        padding: 0.5rem 1rem;
+        margin-right: 0.5rem;
+    }
+
+    // Submenu
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 71px;
+        left: 0;
+        padding: 0.75rem 0;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 1.75rem;
+        z-index: 5;
+        background-color: $secondary-light;
+
+        & > .bottom {
+            grid-column: span 2;
+            border-top: 1px solid #fff;
+            margin: 0 .75rem;
+            padding: .75rem .25rem 0 .25rem;
+        }
+    }
+    .with-submenu:hover > .submenu {
+        display: grid;
+    }
+
+}
+
+.polygon-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 25rem;
+    grid-auto-rows: 22rem;
+    grid-auto-flow: dense;
+    gap: 4px;
+    padding: 4px;
+
+    .polygon-grid__article {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        .img-wrapper {
+            display: block;
+            flex: 1;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .data {
+            padding: 1rem;
+            position: relative;
+            z-index: 2;
+            flex: 0 0 auto;
+        }
+
+        .category {
+            margin-top: -2.1rem;
+            display: block;
+            font-family: sans-serif;
+            margin-bottom: 0.5rem;
+
+            a {
+                padding: 4px 8px;
+                font-size: .8rem;
+                display: inline-block;
+                color: #fff;
+                background-color: $primary;
+                text-transform: uppercase;
+            }
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            font-family: "Montserrat", sans-serif;
+            color: #424242;
+            line-height: 1.1;
+        }
+
+        h4 {
+            color: #424242;
+            margin-bottom: 0;
+            font-family: "BioRhyme", serif;
+        }
+        h2 a,
+        h4 a {
+            color: inherit;
+            display: inline-block;
+        }
+
+        &:first-child {
+            grid-column: span 3;
+            clip-path: polygon(0 0, calc(100% - 3rem) 0, 100% 3rem, 100% 100%, 0 100%);
+            overflow: hidden;
+        }
+
+        &:nth-child(2) {
+            margin-top: 3rem;
+        }
+
+        &:nth-child(4),
+        &:nth-last-child(3) {
+            grid-column: span 2;
+        }
+        &:nth-child(4) .data,
+        &:first-child .data,
+        &:nth-last-child(3) .data {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            & > * {
+                margin-bottom: 0;
+                & + * {
+                    margin-top: 0.5rem;
+                }
+            }
+
+            a {
+                color: #fff;
+            }
+
+            h2 {
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 1.5rem;
+                font-family: "Montserrat", sans-serif;
+            }
+
+            .img-wrapper {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,192 @@
+@import "bootstrap/bootstrap.scss";
+@import "polygon.scss";
+
+/*... portada...*/
+
+.col-12 img {
+    border-style: outset;
+    border-width: 3px;
+    border-color: black;
+}
+
+.col-12>h1 {
+    text-align: center;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Caveat', cursive;
+    font-size: calc(1.5em + 1vw);
+}
+
+.col-12>h2 {
+    text-align: center;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Caveat', cursive;
+    font-size: calc(1em + 1vw);
+}
+
+
+/*... navegador ...*/
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar a {
+    border: 1px solid white;
+    border-style: outset;
+    border-width: 3px 3px 3px;
+    border-radius: 3px;
+    padding: 10px;
+    display: inline-block;
+    background-color: black;
+    color: white;
+}
+
+.navbar ul li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.col-md-6 .portada>h3 {
+    font-weight: bold;
+    font-size: calc(1em + 1vw);
+}
+
+.col-md-6 .info>h3 {
+    font-weight: bold;
+    font-size: calc(1em + 1vw);
+}
+
+.col-md-6 .portada>p {
+    text-align: justify;
+}
+
+.col-md-12 h3 {
+    color: white;
+    font-weight: bold;
+    font-size: calc(1em + 1vw);
+    background-color: black;
+    text-align: center;
+}
+
+.col-md-12 p {
+    text-align: center;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    text-align: center;
+}
+
+
+/*... Fotos y video...*/
+
+.video {
+    /*background-color: violet;*/
+    text-align: center;
+    color: black;
+}
+
+.hvideo,
+.himg {
+    color: white;
+    background-image: black;
+    font-size: calc(1em + 1vw);
+    text-align: center;
+}
+
+.col-md-12 p {
+    color: black;
+    text-align: center;
+    font-style: italic;
+}
+
+.video p {
+    color: black;
+    text-align: center;
+    font-style: italic, bold;
+}
+
+.carousel-caption p,
+h5 {
+    font-size: 100%;
+    color: white;
+}
+
+.container-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+
+/*...Blog...*/
+
+.col-md-6 p {
+    text-align: center;
+    font-style: italic;
+}
+
+.col-md-6 a {
+    text-align: center;
+}
+
+.hescrit,
+.hform {
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: calc(1em + 1vw);
+}
+
+
+/*... listas ....*/
+
+.info ol li {
+    color: black;
+    list-style: none;
+}
+
+.info ul li {
+    color: black;
+    list-style: none;
+}
+
+.hInfo {
+    background-color: white;
+    text-align: left;
+    font-weight: bold;
+    font-size: calc(1em + 1vw);
+}
+
+#redesSociales {
+    width: 10%;
+}
+
+.col-md-12 form {
+    line-height: 30px;
+    text-align: center;
+}
+
+textarea {
+    width: 300px;
+    height: 300px;
+}
